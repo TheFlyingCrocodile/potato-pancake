@@ -33,7 +33,7 @@ def main():
         print('No upcoming events found.')
     for event in events:
         start = event['start'].get('dateTime', event['start'].get('date'))
-        print(start, event['summary'])
+        print(start, event['summary'], event['description'])
 
 if __name__ == '__main__':
     main()
