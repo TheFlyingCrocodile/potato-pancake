@@ -8,9 +8,6 @@ from oauth2client import file, client, tools
 SCOPES = 'https://www.googleapis.com/auth/calendar.readonly'
 
 def main():
-    """Shows basic usage of the Google Calendar API.
-    Prints the start and name of the next 10 events on the user's calendar.
-    """
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
@@ -28,6 +25,7 @@ def main():
                                         maxResults=10, singleEvents=True,
                                         orderBy='startTime').execute()
     events = events_result.get('items', [])
+    print(now)
 
     if not events:
         print('No upcoming events found.')
