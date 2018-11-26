@@ -9,3 +9,4 @@ Dependencies:
 *pip install oauth2
 *pip install simplejson
 *pip install python-instagram
+*pip install configparser
